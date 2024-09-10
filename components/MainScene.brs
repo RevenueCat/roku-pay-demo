@@ -77,10 +77,13 @@ sub updateProductsList()
 end sub
 
 sub isEntitled(product) as boolean
-    if m.purchases <> invalid and m.purchases[product.code] <> invalid and m.purchases[product.code].status = "Valid"
-        return true
+    if m.purchases <> invalid and m.purchases[product.code] <> invalid
+        if m.purchases[product.code].status = "Valid"
+            return true
+        else
+            return false
+        end if
     end if
-    return false
 end sub
 
 sub updateProductInfo(product)

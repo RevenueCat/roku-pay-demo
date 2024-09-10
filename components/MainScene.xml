@@ -4,9 +4,7 @@
     <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
     <children>
 
-        <ChannelStore
-            id="store"
-            fakeServer="false" />
+        <ChannelStore id="store" />
 
         <Label
             id="title"
